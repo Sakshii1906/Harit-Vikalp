@@ -12,9 +12,11 @@ export default function App() {
     const matchCat = activeCat === "All" || item.cat === activeCat
     const q = query.toLowerCase()
     const matchQ =
-      !q ||
-      item.original.toLowerCase().includes(q) ||
-      item.alt.toLowerCase().includes(q)
+    !q ||
+    (item.original && item.original.toLowerCase().includes(q)) ||
+    (item.alternatives && item.alternatives.some(a => 
+      a.alt && a.alt.toLowerCase().includes(q)
+    ))
     return matchCat && matchQ
   })
 

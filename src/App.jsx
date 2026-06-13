@@ -33,7 +33,7 @@ export default function App() {
         {/* Search */}
         <input
           type="text"
-          placeholder="Search karo... jaise dahi, paneer, ghee"
+          placeholder="Search ... eg. dahi, paneer, ghee"
           value={query}
           onChange={e => setQuery(e.target.value)}
           className="w-full px-4 py-3 rounded-xl border border-green-200 bg-white text-gray-700 outline-none focus:border-green-500 mb-4 text-sm"
@@ -61,7 +61,7 @@ export default function App() {
           {filtered.length === 0 ? (
             <div className="text-center py-12 text-gray-400">
               <p className="text-3xl mb-2">🌿</p>
-              <p>Koi result nahi mila. Doosra search karo!</p>
+              <p>No results. Search something else!</p>
             </div>
           ) : (
             filtered.map(item => (

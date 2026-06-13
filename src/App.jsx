@@ -6,10 +6,10 @@ const cats = ["All", "Dairy", "Dessert", "Protein", "Staple", "Nutrients"]
 
 export default function App() {
   const [query, setQuery] = useState("")
-  const [activeCat, setActiveCat] = useState("Sab")
+  const [activeCat, setActiveCat] = useState("All")
 
   const filtered = alternatives.filter(item => {
-    const matchCat = activeCat === "Sab" || item.cat === activeCat
+    const matchCat = activeCat === "All" || item.cat === activeCat
     const q = query.toLowerCase()
     const matchQ =
       !q ||
